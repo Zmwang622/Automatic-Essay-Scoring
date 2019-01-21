@@ -12,7 +12,7 @@ import edu.stanford.nlp.process.CoreLabelTokenFactory;
 import edu.stanford.nlp.process.DocumentPreprocessor;
 import edu.stanford.nlp.process.PTBTokenizer;
 
-public class Tokenizer {
+public class Lemmatizer {
 
 	public static void main(String[] args) throws IOException, FileNotFoundException {
 		// TODO Auto-generated method stub
