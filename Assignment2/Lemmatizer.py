@@ -10,10 +10,11 @@ from nltk.stem import WordNetLemmatizer
 f = open('bodies.csv', encoding = "utf-8")
 bodies_raw = f.read() + '\n'
 bodies_tokenized = word_tokenize(bodies_raw)
-
+bodies_tokenized=nltk.pos_tag(bodies_tokenized)
+bodies_lemmatized = [];
 lemmatizer = WordNetLemmatizer()
-bodies_lemmatized= [lemmatizer.lemmatize(token) for token in bodies_tokenized]
-
+for token in bodies_tokenized:
+    bodies_lemmatized.append(lemmatizer.lemmatize(token))
 file = open('Lemmatized_Bodies_nltk.txt', 'w', encoding = 'utf-8')
 s1='\n'.join(bodies_lemmatized)
 #    for item in bodies_tokenized:
