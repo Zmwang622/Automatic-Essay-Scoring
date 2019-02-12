@@ -15,6 +15,7 @@ from sklearn.metrics import f1_score
 from sklearn.metrics import accuracy_score
 iris = load_iris()
 
+print(iris.data)
 label_names = iris.target_names
 labels = iris.target
 feature_names = iris.feature_names
@@ -36,6 +37,7 @@ lr = LogisticRegression(solver = 'lbfgs',multi_class="multinomial")
 lr_model = lr.fit(train, train_labels)
 lr_preds = lr.predict(test)
 
+print(lr.coef_)
 #lr_f1_score = f1_score(test_labels,lr_preds, average = 'macro')
 #lr_accuracy = accuracy_score(test_labels, lr_preds)
 print(lr_model.classes_)
