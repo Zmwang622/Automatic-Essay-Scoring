@@ -20,7 +20,8 @@ from nltk.sentiment.sentiment_analyzer import SentimentAnalyzer
 
 training = pd.read_csv('drugLibTrain_raw.tsv', delimiter = '\t', encoding = 'utf-8')
 testing = pd.read_csv('drugLibTest_raw.tsv', delimiter = '\t', encoding = 'utf-8')
-
+print(training.columns)
+training1= training[['effectiveness','commentsReview']]
 training['commentsReview'] = training['commentsReview'].astype(str)
 raw_comments=""
 for index, row in training.iterrows():
@@ -35,5 +36,5 @@ for comment in tokenized_comments:
     if comment not in stop_words:
         filtered_comments.append(comment)
 
-print(filtered_comments)
+# print(filtered_comments)
     

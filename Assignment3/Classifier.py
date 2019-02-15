@@ -17,6 +17,7 @@ iris = load_iris()
 
 print(iris.data)
 label_names = iris.target_names
+print(label_names)
 labels = iris.target
 feature_names = iris.feature_names
 features = iris.data
